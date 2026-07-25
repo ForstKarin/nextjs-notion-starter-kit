@@ -2,7 +2,7 @@ import { siteConfig } from './lib/site-config'
 
 export default siteConfig({
   // 1. 你的 Notion 主页 ID（最关键的修改！）
-  rootNotionPageId: '2c7f30ab39d88310b46f01ed239f175d',
+  rootNotionPageId: 'b51f30ab39d88302a4f18155bf3b9192',
 
   // 不限制工作区，保持 null 即可
   rootNotionSpaceId: null,
