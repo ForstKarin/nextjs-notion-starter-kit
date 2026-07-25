@@ -16,9 +16,9 @@ export default siteConfig({
   description: '阿尔卡伊档案库',
 
   // 4. 社交账号（把原作者的账号全改成 null，防止页面底部显示别人的社交链接）
-  twitter: null,
-  github: null,
-  linkedin: null,
+  twitter: undefined,
+  github: undefined,
+  linkedin: undefined,
   // newsletter: '#', 
   // youtube: '#', 
 
