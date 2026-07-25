@@ -1,65 +1,41 @@
 import { siteConfig } from './lib/site-config'
 
 export default siteConfig({
-  // the site's root Notion page (required)
-  rootNotionPageId: '7875426197cf461698809def95960ebf',
+  // 1. 你的 Notion 主页 ID（最关键的修改！）
+  rootNotionPageId: '2c7f30ab39d88310b46f01ed239f175d',
 
-  // if you want to restrict pages to a single notion workspace (optional)
-  // (this should be a Notion ID; see the docs for how to extract this)
+  // 不限制工作区，保持 null 即可
   rootNotionSpaceId: null,
 
-  // basic site info (required)
-  name: 'Next.js Notion Starter Kit',
-  domain: 'nextjs-notion-starter-kit.transitivebullsh.it',
-  author: 'Travis Fischer',
+  // 2. 网站基本信息
+  name: 'Archives of Alkhaios', // 网站名称（阿尔凯奥斯档案馆）
+  domain: 'alkhaios.cn', // 填入你在阿里云买的域名（如果没有确定，可以先填 'archives-of-alkhaios'）
+  author: '凛虚Unravel', // 你的作者名/笔名
 
-  // open graph metadata (optional)
-  description: 'Example Next.js Notion Starter Kit Site',
+  // 3. 网站分享简介（在微信/社交软件分享时显示的摘要）
+  description: '阿尔卡伊档案库',
 
-  // social usernames (optional)
-  twitter: 'transitive_bs',
-  github: 'transitive-bullshit',
-  linkedin: 'fisch2',
-  // mastodon: '#', // optional mastodon profile URL, provides link verification
-  // newsletter: '#', // optional newsletter URL
-  // youtube: '#', // optional youtube channel name or `channel/UCGbXXXXXXXXXXXXXXXXXXXXXX`
+  // 4. 社交账号（把原作者的账号全改成 null，防止页面底部显示别人的社交链接）
+  twitter: null,
+  github: null,
+  linkedin: null,
+  // newsletter: '#', 
+  // youtube: '#', 
 
-  // default notion icon and cover images for site-wide consistency (optional)
-  // page-specific values will override these site-wide defaults
+  // 默认图标和封面
   defaultPageIcon: null,
   defaultPageCover: null,
   defaultPageCoverPosition: 0.5,
 
-  // whether or not to enable support for LQIP preview images (optional)
+  // 预览图片支持
   isPreviewImageSupportEnabled: true,
 
-  // whether or not redis is enabled for caching generated preview images (optional)
-  // NOTE: if you enable redis, you need to set the `REDIS_HOST` and `REDIS_PASSWORD`
-  // environment variables. see the readme for more info
+  // Redis 缓存（免费版 Vercel 保持 false 即可）
   isRedisEnabled: false,
 
-  // map of notion page IDs to URL paths (optional)
-  // any pages defined here will override their default URL paths
-  // example:
-  //
-  // pageUrlOverrides: {
-  //   '/foo': '067dd719a912471ea9a3ac10710e7fdf',
-  //   '/bar': '0be6efce9daf42688f65c76b89f8eb27'
-  // }
+  // 自定义 URL 别名（暂时不需要，保持 null）
   pageUrlOverrides: null,
 
-  // whether to use the default notion navigation style or a custom one with links to
-  // important pages. To use `navigationLinks`, set `navigationStyle` to `custom`.
+  // 导航栏样式
   navigationStyle: 'default'
-  // navigationStyle: 'custom',
-  // navigationLinks: [
-  //   {
-  //     title: 'About',
-  //     pageId: 'f1199d37579b41cbabfc0b5174f4256a'
-  //   },
-  //   {
-  //     title: 'Contact',
-  //     pageId: '6a29ebcb935a4f0689fe661ab5f3b8d1'
-  //   }
-  // ]
 })
